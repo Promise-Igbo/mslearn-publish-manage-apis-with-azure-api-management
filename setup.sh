@@ -15,13 +15,13 @@ git config --global user.email "$GIT_EMAIL"
 RESOURCE_GROUP=$(az group list --query "[0].name" -o tsv)
 
 # Create App Service plan
-PLAN_NAME=myPlan
+PLAN_NAME=myPlanapi
 
 
 printf "\nCreating App Service plan in FREE tier ... (2/7)\n\n"
 
 
-az appservice plan create --name $apiappname --resource-group $RESOURCE_GROUP --sku FREE --location centralus --verbose
+az appservice plan create --name $apiappname --resource-group $RESOURCE_GROUP --sku FREE --location eastus2 --verbose
 
 printf "\nCreating API App ... (3/7)\n\n"
 
